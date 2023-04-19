@@ -110,3 +110,9 @@ C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\obj\Debug\net5.0\Prueb
 C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\obj\Debug\net5.0\ref\PruebaTreda.dll
 C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\obj\Debug\net5.0\PruebaTreda.pdb
 C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\obj\Debug\net5.0\PruebaTreda.genruntimeconfig.cache
+C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\bin\Debug\net5.0\Serilog.dll
+C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
+C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
+C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\bin\Debug\net5.0\Serilog.Settings.Configuration.dll
+C:\Users\milto\Desktop\Reto-C--TredaSolutions\PruebaTreda\bin\Debug\net5.0\Serilog.Sinks.Console.dll

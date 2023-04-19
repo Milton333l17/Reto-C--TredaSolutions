@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PruebaTreda.DTO;
 using PruebaTreda.Entities;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace PruebaTreda.Controllers
         [HttpGet("GetTiendas")]
         public async Task<ActionResult<List<TiendaDTO>>> Get()
         {
+            Log.Information("Start - EntPoint GetTiendas");
+
             var List = await DBContext.Tiendas.Select(
                 s => new TiendaDTO
                 {
@@ -40,6 +43,7 @@ namespace PruebaTreda.Controllers
             }
             else
             {
+                Log.Information("Finish - EntPoint GetTiendas");
                 return List;
             }
         }
@@ -47,6 +51,7 @@ namespace PruebaTreda.Controllers
         [HttpGet("GetTiendaById")]
         public async Task<ActionResult<TiendaDTO>> GetTiendaById(int Id)
         {
+            Log.Information("Start - EntPoint GetTiendaById");
             TiendaDTO tienda = await DBContext.Tiendas.Select(
                     s => new TiendaDTO
                     {
@@ -62,6 +67,7 @@ namespace PruebaTreda.Controllers
             }
             else
             {
+                Log.Information("Finish - EntPoint GetTiendaById");
                 return tienda;
             }
         }
@@ -69,6 +75,7 @@ namespace PruebaTreda.Controllers
         [HttpPost("InsertTienda")]
         public async Task<HttpStatusCode> InsertTienda(TiendaDTO tienda)
         {
+            Log.Information("Start - EntPoint InsertTienda");
             var entity = new Tienda()
             {
                 Nombre = tienda.Nombre,
@@ -78,12 +85,14 @@ namespace PruebaTreda.Controllers
             DBContext.Tiendas.Add(entity);
             await DBContext.SaveChangesAsync();
 
+            Log.Information("Finish - EntPoint InsertTienda");
             return HttpStatusCode.Created;
         }
 
         [HttpPut("UpdateTienda")]
         public async Task<HttpStatusCode> UpdateTienda(TiendaDTO tienda)
         {
+            Log.Information("Start - EntPoint UpdateTienda");
             var entity = await DBContext.Tiendas.FirstOrDefaultAsync(s => s.Id == tienda.Id);
 
             entity.Nombre = tienda.Nombre;
@@ -91,12 +100,14 @@ namespace PruebaTreda.Controllers
                
 
             await DBContext.SaveChangesAsync();
+            Log.Information("Finish - EntPoint UpdateTienda");
             return HttpStatusCode.OK;
         }
 
         [HttpDelete("DeleteTienda/{Id}")]
         public async Task<HttpStatusCode> DeleteTienda(int Id)
         {
+            Log.Information("Start - EntPoint DeleteTienda");
             var entity = new Tienda()
             {
                 Id = Id
@@ -104,6 +115,7 @@ namespace PruebaTreda.Controllers
             DBContext.Tiendas.Attach(entity);
             DBContext.Tiendas.Remove(entity);
             await DBContext.SaveChangesAsync();
+            Log.Information("Finish - EntPoint DeleteTienda");
             return HttpStatusCode.OK;
         }
     }

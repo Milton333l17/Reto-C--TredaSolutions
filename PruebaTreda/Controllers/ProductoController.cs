@@ -123,5 +123,31 @@ namespace PruebaTreda.Controllers
             await DBContext.SaveChangesAsync();
             return HttpStatusCode.OK;
         }
+
+        [HttpGet("GetProductosByTiendaId")]
+        public async Task<ActionResult<List<ProductoDTO>>> GetProductosByTiendaId(int Id)
+        {
+            List<ProductoDTO> productos = await DBContext.Productos.Select(
+                    s => new ProductoDTO
+                    {
+                        Id = s.Id,
+                        SKU = s.SKU,
+                        Nombre = s.Nombre,
+                        Descripcion = s.Descripcion,
+                        Imagen = s.Imagen,
+                        Valor = s.Valor,
+                        TiendaId = s.TiendaId
+                    })
+                .Where(s => s.TiendaId == Id).ToListAsync();
+
+            if (productos == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return productos;
+            }
+        }
     }
 }
