@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wqx/XCogp1Sr+kRVIaElROiiBl8Y+x/e95j2l/mhbdStQrvqYNa9p6OvgHSbHw1cjd/xa91n54vt8O0cgEEozg==",
+  "dgSpecHash": "2c1uPaNqQrbU6m0T+vtd22b0DOsmfVCbmLzWoUzQZhLwBBoMoDHmoBxP7dfTH3q517bkhWXYDI9t6v6ZLGdJ1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\milto\\Desktop\\Reto-C--TredaSolutions\\PruebaTreda\\PruebaTreda\\PruebaTreda.csproj",
+  "projectFilePath": "C:\\Users\\milto\\Desktop\\Reto-C--TredaSolutions\\PruebaTreda\\PruebaTreda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\milto\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\milto\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
