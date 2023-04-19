@@ -29,6 +29,9 @@ namespace PruebaTreda.Entities
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             OnModelCreatingPartial(modelBuilder);
+
+            modelBuilder.Entity<Producto>().HasIndex(p => p.SKU)
+            .IsUnique();
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
